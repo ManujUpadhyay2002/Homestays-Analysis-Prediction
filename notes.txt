@@ -1,0 +1,72 @@
+id : just drop it 
+
+log_price : actual price converted into natural log (it's in our fever)
+
+property_type : i has to deal with 35 unique values 💀💀💀
+
+room_type : it have only 3 unique values there is no issue with it
+
+amenities : it contains info in form of string and in that it contain set which is not proper structured and there is also some 'translation missing' kind of values which i have to handle. Also have to apply so much preprocessing to fetch important features. 💀💀💀
+
+accommodates : it contains info that howmany number of people can properly accommodat in home, range: [1-16], can be converted into categorical (ex. small size family, mid size family)
+
+bathrooms :  a property with 2.5 bathrooms might indicate two full bathrooms and one half bathroom (i.e., a bathroom without a bathtub or shower). [Little-bit preprocessing needed]
+
+bed_type : 
+            Real Bed: A standard, traditional bed with a mattress and frame.
+            Pull-out Sofa: A sofa that can be converted into a bed by pulling out a hidden mattress.
+            Futon: A Japanese-style mattress that can be used as a bed or folded into a couch.
+            Airbed: An inflatable mattress that can be used as a temporary bed.
+            Couch: A standard couch that is not designed for sleeping.
+
+cancellation_policy : ['strict', 'moderate', 'flexible', 'super_strict_30','super_strict_60'], try to convert them into three category 
+
+cleaning_fee : not that much issue with it, it has only true-false values
+
+city : ['NYC', 'SF', 'DC', 'LA', 'Chicago', 'Boston'] -> there is little-bit bias in that cities, try to match it with geo-spatial data
+
+description : description of property, this column required NLP tasks to apply 💀💀💀
+
+first_review : that all are the dates 
+
+host_has_profile_pic : basically to true-false values, 
+
+                    -> This feature can be useful for various purposes:
+                        - Trustworthiness: Hosts with profile pictures may appear more trustworthy or legitimate to potential guests.
+                        - Engagement: Hosts with profile pictures may be perceived as more engaged or active in managing their property    
+                                      listing.
+                        - Personalization: It can also add a personal touch to the listing, helping guests feel more comfortable and 
+                                           confident in their booking.
+
+host_identity_verified : same true-false values,
+
+host_response_rate : basically values between [0-100] %, need to convert into different ranges such as 0-20% or can be converted into categories 💀💀💀
+
+host_since : joining dates of host 
+
+instant_bookable : simply true-false values
+
+                    -> Instant bookable = True: This means that guests can book the property instantly without waiting for host approval. The booking process is automated, and guests can secure the reservation immediately.
+                    -> Instant bookable = False: In this case, guests cannot book the property instantly. Instead, they need to wait for the host to approve their booking request. The host has the option to review the guest's profile or ask questions before confirming the reservation.
+
+last_review : last_review date
+
+latitude : geo-spatial analysis 💀💀💀
+
+longitude : geo-spatial analysis 💀💀💀 
+
+name : apply nlp on it find some meaningful from it 💀💀💀
+
+neighbourhood : important feature to find some location related info., apply NLP on it 💀💀💀
+
+number_of_reviews : count of total reviews 
+
+review_scores_rating : user feedback score, important feature\
+
+thumbnail_url : not useful currently 
+
+zipcode : zipcode of property
+
+bedrooms : no.of bedrooms in property 
+
+beds : no. of beds

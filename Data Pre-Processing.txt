@@ -1,0 +1,28 @@
+-> Data Pre-processing:
+
+1. Handle Duplicate values:
+    - There is not any Duplicate values.
+
+2. Deal with Null values:
+    - `first_review`,`last_review` have not direct correlation with target variable so we can drop it.
+    - In `thumbnail_url` we can replace null values with 'URL not available' text.
+    - so from property_type i can predict bedrooms & bathrooms and from bedrooms i can predict beds
+    - Now for `description` we can drops null rows because it's only 0.01% and we can predict it not that much necessary.
+    - Now for `name` we can drops null rows because it's only 0.01% and we can predict it not that much necessary.
+    - currently ignoring `zipcode` & `neighbourhood` because there is possibility that it can be droped in future because of latitude and longitude.
+    - `host_has_profile_pic` just ignore for now if it not shows future importance for predicting target variable than we can drop null values containing rows 
+    - `host_identity_verified` just ignore for now if it not shows future importance for predicting target variable than we can drop null values containing rows
+    - `host_since` just ignore for now if it not shows future importance for predicting target variable than we can drop null values containing rows
+    - `host_response_rate` just ignore for now if it not shows future importance for predicting target variable than we can drop null values containing rows
+
+3. Deal with Outlier values:
+    - `accommodates` future work
+    - `bathrooms` future work
+    - `host_response_rate` convert it into categorical values
+    - `number_of_reviews` do something with it
+    - `review_scores_rating` convert it into categorical values
+    - `bedrooms` future work
+    - `beds` future work
+    -
+    
+4. 

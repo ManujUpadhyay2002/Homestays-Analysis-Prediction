@@ -1,0 +1,14 @@
+1. Drop 'id' column, because it not help to predict target variable.
+
+2. issues with low frequency data :
+
+    - Data Sparsity: Low-frequency categories may lead to data sparsity issues, especially if you have limited samples for those categories. This can make it challenging for machine learning algorithms to learn meaningful patterns or relationships for these categories.
+    - Generalization: Machine learning models may struggle to generalize well to low-frequency categories, as they may not have enough data to accurately learn the characteristics or patterns associated with those categories. This can result in poor performance on unseen data, leading to overfitting or underfitting.
+    - Feature Importance: Low-frequency categories may have less importance in predicting the target variable compared to high-frequency categories. Dropping them can help simplify the model and reduce the dimensionality of the feature space, focusing on the most relevant information.
+    - Robustness: Removing low-frequency categories can make the model more robust by reducing the potential for noise or outliers associated with those categories. This can lead to better generalization performance on unseen data and improve the model's reliability.
+    - Interpretability: High-frequency categories often capture the majority of the data distribution and are more interpretable in the context of the problem. Focusing on these categories can make the model easier to interpret and understand.
+
+    -> so i am going to convert all categories which have less than 5%(3000 data) data then i will convert it to 'other' category.
+
+    - but as second option we keep them all and then train model.
+
